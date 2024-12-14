@@ -2,30 +2,26 @@ import {
   mobile,
   backend,
   creator,
-  web,
   javascript,
   typescript,
   html,
   css,
+  web,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  flutter,
   carrent,
   jobit,
   tripguide,
   threejs,
 } from "../assets";
 
-export const navLinks = [
+
+const navLinks = [
   {
     id: "about",
     title: "About",
@@ -40,13 +36,16 @@ export const navLinks = [
   },
 ];
 
+export default navLinks;
+
+
 const services = [
   {
     title: "Web Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Flutter Developer",
     icon: mobile,
   },
   {
@@ -81,8 +80,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Flutter",
+    icon: flutter,
   },
   {
     name: "Tailwind CSS",
@@ -105,10 +104,6 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
     name: "docker",
     icon: docker,
   },
@@ -116,150 +111,93 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Flutter Developer",
+    company_name: "GrafixUI",
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "October 2024 - Currently",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed and developed the TicketVerse application from scratch using Flutter, implementing a complete ticket management and verification system.",
+      "Integrated backend APIs to enable role-based authentication, ticket validation, and real-time QR code scanning functionality.",
+      "Built a user-friendly and responsive UI/UX with role-specific interfaces and modern design elements like neumorphic styling and animations.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Designer",
+    company_name: "TED-X",
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "August 2024 - Currently",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed visually appealing posters and promotional materials to enhance the branding and visibility of Ted-X events at GCT.",
+      "Produced engaging videos for event promotion and post-event highlights, showcasing key moments and ensuring a professional presentation.",
+      "Worked closely with event organizers to align design concepts with the event theme, ensuring consistent and impactful communication.",
     ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Ticket Verse",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "TicketVerse is a comprehensive ticket management system designed to simplify booking, verification, and access control. The project focuses on leveraging QR code technology for secure and tamper-proof ticket generation, allowing users to book tickets for events or services seamlessly. It integrates with APIs to handle real-time verification during check-ins, ensuring a smooth and efficient process for both users and organizers.",
     tags: [
       {
-        name: "react",
+        name: "Flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "SQL",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Provider",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Rahulranesh/ticket.git",
   },
   {
-    name: "Job IT",
+    name: "Ink-Haven",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "InkHaven is a blogging platform that allows users to create, share, and engage with content. It provides a seamless experience for writing and publishing blog posts, while also enabling readers to comment and interact with the content. The app includes features such as real-time comment sections, post interactions, and user profiles. Designed with an intuitive UI, InkHaven fosters a community-driven environment where users can easily share their thoughts and connect with others through comments and discussions.",
     tags: [
       {
-        name: "react",
+        name: "Flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Firebase",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Provider",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Rahulranesh/Blogging.git",
   },
   {
-    name: "Trip Guide",
+    name: "Sevai",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "SEVAI is a food delivery app that allows users to browse, order, and pay for food from various restaurants. With a user-friendly interface, SEVAI offers features like menu browsing, cart management, checkout, and receipt generation. The app also supports light and dark modes for a personalized user experience. SEVAI integrates secure payment methods and provides real-time updates on order status. Designed to make food delivery convenient and efficient, it aims to offer a seamless experience from ordering to payment and delivery tracking.",
     tags: [
       {
-        name: "nextjs",
+        name: "Flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Firebase",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Provider",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Rahulranesh/food_delivery.git",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

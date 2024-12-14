@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -63,4 +63,4 @@ const Feedbacks = () => {
   );
 };
 
-export default SectionWrapper(Feedbacks, "");
+export default SectionWrapper(Feedbacks, "");*/
