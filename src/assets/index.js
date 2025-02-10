@@ -22,38 +22,44 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import aws from "./tech/aws.png";
+import aws_services from "./tech/aws_services.png";
 
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import grafix from "./grafix.png";
+import tedx from "./logo-white.png";
+import placement from "./placement_picture.png";
+import inkhaven from "./ink_haven.png";
+import sevai from "./sevai.png";
 
 export {
-  logo,
+  mobile,
   backend,
   creator,
-  mobile,
-  web,
-  github,
-  menu,
-  close,
-  css,
-  flutter,
-  flutter,
-  
-  docker,
-    git,
-  html,
   javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  
-  tailwind,
   typescript,
-  threejs,
-  
+  html,
+  css,
+  web,
+  reactjs,
+  tailwind,
+  nodejs,
+  mongodb,
+  git,
+  docker,
+  flutter,  // only one instance of flutter
   carrent,
   jobit,
   tripguide,
-};
+  aws,
+  aws_services,
+  threejs,
+  tedx,
+  grafix,
+  inkhaven,
+  placement,
+  sevai,
+} from "../assets";

@@ -17,9 +17,15 @@ import {
   carrent,
   jobit,
   tripguide,
+  aws,
+  aws_services,
   threejs,
+  tedx,
+  grafix,
+  inkhaven,
+  placement,
+  sevai,
 } from "../assets";
-
 
 const navLinks = [
   {
@@ -38,7 +44,6 @@ const navLinks = [
 
 export default navLinks;
 
-
 const services = [
   {
     title: "Web Developer",
@@ -49,11 +54,11 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "AWS Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "AWS Services",
     icon: creator,
   },
 ];
@@ -70,10 +75,6 @@ const technologies = [
   {
     name: "JavaScript",
     icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
   },
   {
     name: "React JS",
@@ -100,6 +101,10 @@ const technologies = [
     icon: threejs,
   },
   {
+    name: "AWS",
+    icon: aws,
+  },
+  {
     name: "git",
     icon: git,
   },
@@ -107,14 +112,18 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
+  {
+    name: "aws_Services",
+    icon: aws_services,
+  },
 ];
 
 const experiences = [
   {
     title: "Flutter Developer",
-    company_name: "GrafixUI",
-    iconBg: "#383E56",
-    date: "October 2024 - Currently",
+    company_name: "",
+    icon: grafix, // Using grafix image directly
+    date: "October 2024 - Jan",
     points: [
       "Designed and developed the TicketVerse application from scratch using Flutter, implementing a complete ticket management and verification system.",
       "Integrated backend APIs to enable role-based authentication, ticket validation, and real-time QR code scanning functionality.",
@@ -123,8 +132,8 @@ const experiences = [
   },
   {
     title: "Designer",
-    company_name: "TED-X",
-    iconBg: "#E6DEDD",
+    company_name: "",
+    icon: tedx, // Using tedx image directly
     date: "August 2024 - Currently",
     points: [
       "Designed visually appealing posters and promotional materials to enhance the branding and visibility of Ted-X events at GCT.",
@@ -136,25 +145,25 @@ const experiences = [
 
 const projects = [
   {
-    name: "Ticket Verse",
+    name: "Placement_App",
     description:
-      "TicketVerse is a comprehensive ticket management system designed to simplify booking, verification, and access control. The project focuses on leveraging QR code technology for secure and tamper-proof ticket generation, allowing users to book tickets for events or services seamlessly. It integrates with APIs to handle real-time verification during check-ins, ensuring a smooth and efficient process for both users and organizers.",
+      "The Placement App is a dedicated platform designed for GCT Coimbatore students to streamline their placement journey. It provides real-time updates on job opportunities, company recruitment processes, and placement-related events. The app offers access to company profiles, interview experiences, and preparation materials, helping students stay informed and well-prepared. With features like job listings, aptitude tests, and resource sharing, it serves as a one-stop solution for managing placements efficiently. Built using Flutter, the app ensures a smooth user experience, making it easier for students to navigate their career opportunities.",
     tags: [
       {
         name: "Flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "SQL",
+        name: "Firebase",
         color: "green-text-gradient",
       },
       {
-        name: "Provider",
+        name: "Supabase",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/Rahulranesh/ticket.git",
+    image: placement,
+    source_code_link: "https://github.com/Rahulranesh/Placement_app.git",
   },
   {
     name: "Ink-Haven",
@@ -174,7 +183,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: inkhaven,
     source_code_link: "https://github.com/Rahulranesh/Blogging.git",
   },
   {
@@ -195,9 +204,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: sevai,
     source_code_link: "https://github.com/Rahulranesh/food_delivery.git",
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { services, technologies, experiences, projects, navLinks };

@@ -1,12 +1,12 @@
 import React from "react";
-import {Tilt} from "react-tilt";
+import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
-import { styles } from "../styles"; // Ensure this file exists and has the required styles
-import { github } from "../assets"; // Ensure this image path is correct
-import { SectionWrapper } from "../hoc"; // Ensure this HOC is correctly implemented
-import { projects } from "../constants"; // Ensure this array is correctly defined
-import { fadeIn, textVariant } from "../utils/motion"; // Ensure these animation functions exist
+import { styles } from "../styles";
+import { github } from "../assets";
+import { SectionWrapper } from "../hoc";
+import { projects } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
   index,
@@ -29,8 +29,8 @@ const ProjectCard = ({
         <div className="relative w-full h-[230px]">
           <img
             src={image}
-            alt={name} // Better alt text for accessibility
-            className="w-full h-full object-cover rounded-2xl"
+            alt={name}
+            className="w-full h-full object-contain rounded-2xl"  // Changed from object-cover to object-contain
           />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
@@ -80,11 +80,10 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following projects showcase my skills and experience through
-          real-world examples of my work. Each project is briefly described
-          with links to code repositories and live demos. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Following projects showcase my skills and experience through real-world
+          examples of my work. Each project is briefly described with links to code
+          repositories and live demos. It reflects my ability to solve complex problems,
+          work with different technologies, and manage projects effectively.
         </motion.p>
       </div>
 
@@ -97,4 +96,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, ""); // Ensure SectionWrapper is correctly implemented
+export default SectionWrapper(Works, "");

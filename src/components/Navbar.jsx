@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -20,29 +20,26 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
         scrolled ? "bg-primary shadow-md" : "bg-transparent"
       }`}
-      style={{ WebkitTapHighlightColor: "transparent" }} // Prevents flash on tap for mobile browsers
+      style={{ WebkitTapHighlightColor: "transparent" }}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
+        <a
+          href="/"
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
-            window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Ranesh &nbsp;
-            <span className="sm:block hidden">| Flutter Developer</span>
+            Ranesh&nbsp;
+            <span className="sm:block hidden">| Flutter & AWS</span>
           </p>
-        </Link>
-
+        </a>
         {/* Desktop Navigation */}
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
@@ -51,13 +48,18 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => {
+                setActive(nav.title);
+                const element = document.getElementById(nav.id);
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
-              <Link to={`#${nav.id}`} smooth>{nav.title}</Link>
+              <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
-
         {/* Mobile Menu Toggle */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <button
@@ -71,7 +73,6 @@ const Navbar = () => {
               className="w-[28px] h-[28px] object-contain"
             />
           </button>
-
           {/* Mobile Navigation */}
           <div
             className={`${
@@ -88,9 +89,13 @@ const Navbar = () => {
                   onClick={() => {
                     setToggle(false);
                     setActive(nav.title);
+                    const element = document.getElementById(nav.id);
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
                   }}
                 >
-                  <Link to={`#${nav.id}`} smooth>{nav.title}</Link>
+                  <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
             </ul>
@@ -102,4 +107,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-  
