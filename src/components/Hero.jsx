@@ -1,25 +1,24 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
-      <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Ranesh</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop Mobile Apps <br className="sm:block hidden" /> built on Flutter
-          </p>
-        </div>
+    <section className="relative w-full h-screen mx-auto flex flex-col">
+      {/* Top Section: Hero Text */}
+      <div className="flex flex-col justify-center items-center px-6 sm:px-16 z-10 h-[40vh]">
+        <h1 className={`${styles.heroHeadText} text-white text-center`}>
+          Hi, I'm <span className="text-[#915EFF]">Ranesh</span>
+        </h1>
+        <p className={`${styles.heroSubText} mt-2 text-white-100 text-center`}>
+          I develop Mobile Apps built on Flutter & AWS
+        </p>
       </div>
-      <ComputersCanvas />
+      {/* Bottom Section: 3D Computer Model */}
+      <div className="w-full h-[60vh]">
+        <ComputersCanvas />
+      </div>
     </section>
   );
 };

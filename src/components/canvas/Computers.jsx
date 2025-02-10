@@ -1,7 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
@@ -9,7 +8,6 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      {/* Added ambient light and increased hemisphere light intensity */}
       <ambientLight intensity={0.5} />
       <hemisphereLight intensity={0.35} groundColor="black" />
       <spotLight
@@ -23,7 +21,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
+        // Increase the scale values to make the model larger on both mobile and desktop
+        scale={isMobile ? 1.0 : 1.1}
         position={isMobile ? [0, -3, -2.2] : [0, -4, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
@@ -41,9 +40,8 @@ const ComputersCanvas = () => {
       setIsMobile(event.matches);
     };
     mediaQuery.addEventListener("change", handleMediaQueryChange);
-    return () => {
+    return () =>
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
   }, []);
 
   return (
@@ -53,6 +51,7 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      className="w-full h-full"
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
