@@ -19,6 +19,7 @@ const Navbar = () => {
       className={`${styles.paddingX} fixed top-0 z-20 w-full flex items-center py-5 transition-all duration-300 ${
         scrolled ? "bg-primary shadow-md" : "bg-transparent"
       }`}
+      style={{ WebkitTapHighlightColor: "transparent" }}
     >
       <div className="mx-auto flex w-full max-w-7xl justify-between items-center">
         <a

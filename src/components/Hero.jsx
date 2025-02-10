@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import ComputersCanvas from "./canvas/Computers";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto flex flex-col">
-      {/* Top Section: Hero Text */}
-      <div className="flex flex-col justify-center items-center px-6 sm:px-16 z-10 h-[40vh]">
+    <section className="relative w-full min-h-screen flex flex-col">
+      {/* Hero Text */}
+      <div className="flex flex-col items-center justify-center px-6 sm:px-16 py-8 z-10" style={{ height: "40vh" }}>
         <h1 className={`${styles.heroHeadText} text-white text-center`}>
           Hi, I'm <span className="text-[#915EFF]">Ranesh</span>
         </h1>
@@ -15,8 +15,8 @@ const Hero = () => {
           I develop Mobile Apps built on Flutter & AWS
         </p>
       </div>
-      {/* Bottom Section: 3D Computer Model */}
-      <div className="w-full h-[60vh]">
+      {/* 3D Model */}
+      <div className="w-full" style={{ height: "60vh" }}>
         <ComputersCanvas />
       </div>
     </section>
