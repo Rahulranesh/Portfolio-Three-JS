@@ -36,30 +36,39 @@ import inkhaven from "./ink_haven.png";
 import sevai from "./sevai.png";
 
 export {
-  mobile,
+  logo,
   backend,
   creator,
-  javascript,
-  typescript,
-  html,
-  css,
+  mobile,
   web,
-  reactjs,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
+  github,
+  menu,
+  close,
+  css,
+  flutter,
+  
+  
   docker,
-  flutter,  // only one instance of flutter
+    git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
+  reactjs,
+  
+  tailwind,
+  typescript,
+  threejs,
+  
   carrent,
   jobit,
   tripguide,
   aws,
   aws_services,
-  threejs,
-  tedx,
   grafix,
-  inkhaven,
-  placement,
+  tedx,
   sevai,
-} from "../assets";
+  placement,
+  inkhaven,
+  
+};
