@@ -59,6 +59,6 @@ const ComputersCanvas = () => {
       <Preload all />
     </Canvas>
   );
-}
+};
 
 export default ComputersCanvas;
